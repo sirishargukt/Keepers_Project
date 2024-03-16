@@ -1,34 +1,61 @@
 .card {
-    width: 300px;
-    padding: 50px;
-    margin: 10px auto; 
-    justify-content: center; 
-    background-color:whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 600px; 
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #eee; 
 }
-textarea{
-    border: none; /* Remove the border */
 
+.note-container {  
+    display: flex;
+    flex-direction: column; 
+    background-color: #f5f5f5; 
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
 }
+
+.class {
+    flex: 2; 
+    margin-bottom: 0; 
+}
+
 .heading {
-    background-color: darkorange;
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    padding: 8px 0;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.add-button {
+    align-self: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
 }
 
 body {
-    background-color:wheat;
+    background-color: #eee;
 }
-input {
-    border: none; /* Remove the border */
-    margin: 0; /* Remove margin */
-    padding: 0; /* Remove padding if needed */
-}
-textarea::placeholder {
-    font-weight: bold;
-    color: #555;
-    /* You can also adjust the color if needed */
-}
-input::placeholder{
-    font-weight: bold;
-    color: #555; 
-    
 
+textarea,
+input {
+    border: 1px solid #ccc;
+    width: 100%;
+    resize: none;
+}
+
+textarea::placeholder,
+input::placeholder {
+    font-weight: bold;
+    color: #aaa;
 }
