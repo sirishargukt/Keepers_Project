@@ -1,3 +1,5 @@
+// Create_area.jsx
+
 import React, { useState } from 'react';
 
 function Area(props) {
@@ -17,7 +19,7 @@ function Area(props) {
     function submitnote(event) {
         props.onAdd(note);
         event.preventDefault();
-        setNote({
+        setNote({  // Clear the input fields after submitting the text
             title: "",
             content: ""
         });
@@ -26,23 +28,24 @@ function Area(props) {
     return (
         <div>
             <form className=''>
-            <input type="text" 
-             name="title"
-             onChange={handleEvent}  
-             placeholder="Title" 
-             style={{ fontWeight: 'bold', width: '200px' }}>
-            </input>
-            <textarea 
-            name="content" 
-            onChange={handleEvent} 
-             placeholder="Take a note..." 
-             rows="3"
-             style={{ fontWeight: 'bold', width: '300px' }}>
-            </textarea>
-            <button onClick={submitnote} style={{ backgroundColor: 'orange', borderRadius: 3 }}>Add</button>
+                <input type="text"
+                    name="title"
+                    value={note.title}
+                    onChange={handleEvent}
+                    placeholder="Add Title...."
+                    style={{ fontWeight: 'bold', width: '300px' ,border:'none'}}>
+                </input>
+                <textarea
+                    name="content"
+                    value={note.content}
+                    onChange={handleEvent}
+                    placeholder="Take a note..."
+                    rows="3"
+                    style={{ fontWeight: 'bold', width: '300px', marginTop: '10px',border:'none' }}><br></br>
+                </textarea><br></br>
+                <button className="add_button" onClick={submitnote} style={{ backgroundColor: 'black', borderRadius: 3,color:'white', marginTop: '10px' ,padding:'5px'}}>Add</button>
             </form>
         </div>
-        
     );
 }
 
