@@ -22,7 +22,7 @@ function App() {
         <div className="Container">
             <div className="heading">
                 <header>
-                    <h1>Keepers</h1>
+                    <h1>Keepers Project</h1>
                 </header>
             </div>
             <div className="card">
